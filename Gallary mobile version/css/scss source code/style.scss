@@ -1,0 +1,150 @@
+$main-font: 'Nunito', sans-serif;
+$color-one: #fff;
+$color-two: #000;
+@mixin flex-orintation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Normalize Style */
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+* {
+	color: $color-two;
+	margin: 0px;
+	padding: 0;
+	text-decoration: none; 
+}
+
+main {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	transition: .6s ease-in-out;
+	bottom: 0;
+}
+
+/* Skeleton Slider */
+
+section {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	@include flex-orintation;
+	flex-direction: column-reverse;
+}
+
+section:nth-child(1) {
+	background: url(../img/photo1.jpg) center;
+	background-size: cover;
+}
+
+section:nth-child(2) {
+	background: url(../img/photo2.jpg) center;
+	background-size: cover;
+}
+
+section:nth-child(3) {
+	background: url(../img/photo3.jpg) center;
+	background-size: cover;
+}
+
+section:nth-child(4) {
+	background: url(../img/photo4.jpg) center;
+	background-size: cover;
+}
+
+/* Navigations and Pop Up */
+
+nav {
+	position: fixed;
+	z-index: 1000;
+	@include flex-orintation;
+	flex-direction: column;
+	margin: 0 auto;
+	margin-top: 450px;
+	left: 0;
+	right: 0;
+
+	 button:first-child {
+	 	background: url(../img/up.png) no-repeat;
+	 	background-size: cover;
+	 	background-position: 0px -3px;
+	 	width: 56px;
+	 	height: 56px;
+	 	border-radius: 100px;
+	 	border: 2px dashed $color-one;
+	 	margin-bottom: 20px;
+	 }
+
+	 button:last-child {
+	 	background: url(../img/down.png) no-repeat;
+	 	background-size: cover;
+	 	background-position: 0px 3px;
+	 	width: 56px;
+	 	height: 56px;
+	 	border-radius: 100px;
+	 	border: 2px dashed $color-one;
+
+	 }
+}
+
+.show-text {
+	width: 56px;
+	height: 56px;
+	position: fixed;
+	z-index: 1000;
+	margin: 0 auto;
+	margin-top: 30px;
+	left: 0;
+	right: 0;
+
+		button {
+			background: url(../img/eye.png) no-repeat;
+			background-size: cover;
+			background-position: center;
+			width: 56px;
+	 		height: 56px;
+	 		border: 0; 
+		}
+}
+
+.pop-up {
+	@include flex-orintation;
+	position: absolute;
+	z-index: 10000;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+
+		span {
+			color: $color-two;
+			font-family: $main-font;
+			font-size: 17px;
+			padding: 10px 10px;
+			border-radius: 15px;
+			text-align: center;
+			width: 90%;
+			background: $color-one;
+			position: relative;
+		}
+}
+
+.pop-up-button {
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	border: 0;
+	background: url(../img/close.png) center;
+	background-size: cover;
+	width: 64px;
+	height: 64px;
+	top: -70px;
+}
