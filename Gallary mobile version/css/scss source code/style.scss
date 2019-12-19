@@ -75,29 +75,25 @@ nav {
 	 button:first-child {
 	 	background: url(../img/up.png) no-repeat;
 	 	background-size: cover;
-	 	background-position: 0px -3px;
-	 	width: 56px;
-	 	height: 56px;
-	 	border-radius: 100px;
-	 	border: 2px dashed $color-one;
+	 	width: 156px;
+	 	height: 156px;
+	 	border: 0;
 	 	margin-bottom: 20px;
 	 }
 
 	 button:last-child {
 	 	background: url(../img/down.png) no-repeat;
 	 	background-size: cover;
-	 	background-position: 0px 3px;
-	 	width: 56px;
-	 	height: 56px;
-	 	border-radius: 100px;
-	 	border: 2px dashed $color-one;
+	 	width: 156px;
+	 	height: 156px;
+	 	border: 0;
 
 	 }
 }
 
 .show-text {
-	width: 56px;
-	height: 56px;
+	width: 156px;
+	height: 156px;
 	position: fixed;
 	z-index: 1000;
 	margin: 0 auto;
@@ -109,8 +105,8 @@ nav {
 			background: url(../img/eye.png) no-repeat;
 			background-size: cover;
 			background-position: center;
-			width: 56px;
-	 		height: 56px;
+			width: 156px;
+	 		height: 156px;
 	 		border: 0; 
 		}
 }
@@ -144,7 +140,7 @@ nav {
 	border: 0;
 	background: url(../img/close.png) center;
 	background-size: cover;
-	width: 64px;
-	height: 64px;
-	top: -70px;
+	width: 164px;
+	height: 164px;
+	top: -170px;
 }

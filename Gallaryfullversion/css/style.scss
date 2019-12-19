@@ -88,10 +88,6 @@ main {
 		}
 }
 
-.move {
-	transform: translateY(-700px);
-}
-
 /* Counter */
 
 .counter {
@@ -110,6 +106,7 @@ main {
 	width: 13.4375%;
 	height: 5.72916666667%;
 	overflow-y: hidden;
+	overflow-x: hidden; 
 	left: 30px;
 	top: 30px;
 	font-family: $main-font;
@@ -135,4 +132,54 @@ main {
 	z-index: 1000;
 	transition: .6s linear;
 	bottom: 0;
+}
+
+/* NavigationOnCart */
+
+.map {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	width: 50px;
+	height: 50px;
+}
+
+.show-map {
+	border: 0;
+	background: url(../img/map.png) center;
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+	transition: .25s ease-in;
+	z-index: 10000000000000000;
+}
+
+.show-map:hover {
+	background: black;
+}
+
+@media (min-width: 1920px) {
+	.map {
+		width: 100px;
+		height: 100px;
+	}
+	.show-map {
+		width: 100px;
+		height: 100px;
+	}
+	.location {
+		font-size: 50px;
+	}
+	.counter {
+		font-size: 50px;
+		right: 170px;
+		bottom: 98px; 
+	}
+	.move-of-slider {
+		button {
+			img {
+				width: 90px;
+			}
+		}
+	}
 }
