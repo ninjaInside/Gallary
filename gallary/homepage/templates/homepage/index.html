@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <script src="{% static 'homepage/js/libratiles.min.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'homepage/css/style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <script src="{% static 'homepage/js/navigationOnCart.js' %}" defer></script>
+    <script src="{% static 'homepage/js/animation.js' %}" defer></script> 
+	<title>Document</title>
+</head>
+<body>
+	<div class="map">
+		<button class="show-map"></button>
+	</div>
+	<div class="location">
+		<div class="wrap_location">
+			<div class="name">
+                {% for post in posts %}
+                    {{ post.name }}
+                {% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="counter">
+        1
+	</div>
+	<div class="move-of-slider">
+			<button class="button-up" data-direction="up">
+                <img src="{% static 'homepage/img/up.png' %}" alt="">
+			</button>
+			<button class="button-down" data-direction="down">
+                <img src="{% static 'homepage/img/down.png' %}" alt="">
+			</button>
+		</div>
+	<main>
+		<div class="main-window">
+            {% for post in posts %}
+			<div class="slider-element">
+
+				<div class="image-landscape">
+                    <img src="{{ post.image.url }}" alt="">
+				</div>
+
+				<div class="description-landscape">
+                    {{ post.discription }}
+				</div>
+
+			</div>
+            {% endfor %}
+		</div>
+	</main>
+</body>
+</html>
