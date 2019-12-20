@@ -1,3 +1,31 @@
+function debounce(func) {
+
+	let checkTime = true;
+
+	return function wrraper() {
+
+		if (!checkTime) {
+
+			return;
+
+		};
+
+		func.apply(this, arguments);
+
+		checkTime = false;
+
+		setTimeout(() => {
+
+			checkTime = true;
+
+		}, 800);
+
+	}
+
+}
+
+checkButton = debounce(checkButton);
+
 document.addEventListener('click', checkButton);
 
 let posYSlider = 0;
