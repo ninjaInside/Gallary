@@ -188,27 +188,27 @@ main {
 
 @media (min-width: 1920px) {
   .map {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
   }
 
   .show-map {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
   }
 
   .location {
-    font-size: 50px;
+    font-size: 38px;
   }
 
   .counter {
     font-size: 50px;
     right: 170px;
-    bottom: 98px;
+    bottom: 96px;
   }
 
   .move-of-slider button img {
-    width: 90px;
+    width: 85px;
   }
 }
 
