@@ -1,26 +1,22 @@
 /* Normalize style's */
 body {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 * {
   text-decoration: none;
-  color: #000;
-}
+  color: #000; }
 
 img {
   width: 100%;
-  height: 100%;
-}
+  height: 100%; }
 
 /* Skeleton of slider */
 main {
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .main-window {
   position: absolute;
@@ -28,8 +24,7 @@ main {
   height: 100vh;
   bottom: 0px;
   -webkit-transition: .6s linear;
-  transition: .6s linear;
-}
+  transition: .6s linear; }
 
 /* Slide's */
 .slider-element {
@@ -49,19 +44,16 @@ main {
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.slider-element div:first-child {
-  width: 36.16032210835%;
-  height: 45%;
-  background: #000;
-}
-.slider-element div:last-child {
-  width: 400px;
-  text-align: left;
-  font-family: "Nunito", sans-serif;
-  font-size: 18px;
-}
+      justify-content: space-around; }
+  .slider-element div:first-child {
+    width: 36.16032210835%;
+    height: 45%;
+    background: #000; }
+  .slider-element div:last-child {
+    width: 400px;
+    text-align: left;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px; }
 
 /* Movement */
 .move-of-slider {
@@ -80,19 +72,15 @@ main {
           flex-direction: column;
   position: absolute;
   right: 30px;
-  bottom: 30px;
-}
-.move-of-slider button {
-  border: 0;
-  background: transparent;
-  z-index: 100;
-}
-.move-of-slider button img {
-  width: 60px;
-}
-.move-of-slider button:last-child {
-  margin-top: 20px;
-}
+  bottom: 30px; }
+  .move-of-slider button {
+    border: 0;
+    background: transparent;
+    z-index: 100; }
+    .move-of-slider button img {
+      width: 60px; }
+  .move-of-slider button:last-child {
+    margin-top: 20px; }
 
 /* Counter */
 .counter {
@@ -100,8 +88,7 @@ main {
   right: 150px;
   bottom: 80px;
   font-family: "Nunito", sans-serif;
-  font-size: 34px;
-}
+  font-size: 34px; }
 
 /* Location-Observer */
 .location {
@@ -124,8 +111,7 @@ main {
   font-family: "Nunito", sans-serif;
   font-size: 28px;
   background: #000;
-  z-index: 10000;
-}
+  z-index: 10000; }
 
 .wrap_location {
   width: 77.2222222222%;
@@ -142,8 +128,7 @@ main {
           align-items: center;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
-          align-items: baseline;
-}
+          align-items: baseline; }
 
 .name {
   text-align: center;
@@ -159,8 +144,7 @@ main {
   z-index: 1000;
   -webkit-transition: .6s linear;
   transition: .6s linear;
-  bottom: 0;
-}
+  bottom: 0; }
 
 /* NavigationOnCart */
 .map {
@@ -169,7 +153,7 @@ main {
   top: 30px;
   width: 50px;
   height: 50px;
-}
+  z-index: 10000; }
 
 .show-map {
   border: 0;
@@ -179,37 +163,46 @@ main {
   height: 50px;
   -webkit-transition: .25s ease-in;
   transition: .25s ease-in;
-  z-index: 10000000000000000;
-}
+  z-index: 10000; }
 
-.show-map:hover {
-  background: black;
-}
+/* Load Page */
+.preload-window {
+  position: absolute;
+  z-index: 199999;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh; }
+  .preload-window img {
+    width: 80px;
+    height: 80px; }
 
 @media (min-width: 1920px) {
   .map {
     width: 85px;
-    height: 85px;
-  }
+    height: 85px; }
 
   .show-map {
     width: 85px;
-    height: 85px;
-  }
+    height: 85px; }
 
   .location {
-    font-size: 38px;
-  }
+    font-size: 38px; }
 
   .counter {
     font-size: 50px;
     right: 170px;
-    bottom: 96px;
-  }
+    bottom: 96px; }
 
   .move-of-slider button img {
-    width: 85px;
-  }
-}
+    width: 85px; } }
 
 /*# sourceMappingURL=style.css.map */
