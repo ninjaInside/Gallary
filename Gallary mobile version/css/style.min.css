@@ -41,24 +41,10 @@ section {
           flex-direction: column-reverse;
 }
 
-section:nth-child(1) {
-  background: url(../img/photo1.jpg) center;
-  background-size: cover;
-}
-
-section:nth-child(2) {
-  background: url(../img/photo2.jpg) center;
-  background-size: cover;
-}
-
-section:nth-child(3) {
-  background: url(../img/photo3.jpg) center;
-  background-size: cover;
-}
-
-section:nth-child(4) {
-  background: url(../img/photo4.jpg) center;
-  background-size: cover;
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%
 }
 
 /* Navigations and Pop Up */

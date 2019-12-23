@@ -1,13 +1,3 @@
-let massiveWithURL = [
-
-		'https://www.1zoom.me/big2/49/179561-melisenta.jpg',
-		'https://img3.akspic.ru/image/106662-priroda-dikaya_mestnost-ozero_luiza-gora-morennoe_ozero-1920x1080.jpg',
-		'https://www.nastol.com.ua/pic/201502/1024x768/nastol.com.ua-130464.jpg',
-		'https://storge.pic2.me/upload/820/582da5866a5d8.jpg',
-		'https://storge.pic2.me/upload/871/58850f512911e.jpg',
-
-	]
-
 let posYWindow;
 let posXWindow;
 let params;
@@ -28,17 +18,14 @@ function preloadPopUp(e) {
 
 	let posXWindow = document.documentElement.clientWidth / 2;
 	let numberOfData = document.elementFromPoint(posXWindow, posYWindow);
-		numberOfData = numberOfData.dataset.counter;
-		numberOfData = +numberOfData;
+		dataLocation = numberOfData.dataset.location;
 
-	openPopUp(numberOfData);
+	openPopUp(dataLocation);
 
 };
 
-function openPopUp(count) {
+function openPopUp(locate) {
 
-	let url = massiveWithURL[--count];
-
-	window.open(`${url}`, 'test', params);
+	window.open(`${locate}`, 'test', params);
 
 };

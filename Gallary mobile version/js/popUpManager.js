@@ -53,6 +53,7 @@ function showPopUp() {
 	let x = document.documentElement.clientWidth / 2;
  	let y = document.documentElement.clientHeight / 2;
  	let elemForText = document.elementFromPoint(x, y); 
+ 		elemForText = elemForText.closest('section')
  		elemForText = +elemForText.dataset.location;
 
  	let newElemIconButton = document.createElement('button');
