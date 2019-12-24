@@ -18,7 +18,7 @@ function preloadPopUp(e) {
 
 	let posXWindow = document.documentElement.clientWidth / 2;
 	let numberOfData = document.elementFromPoint(posXWindow, posYWindow);
-		dataLocation = numberOfData.dataset.location;
+	let dataLocation = numberOfData.dataset.location;
 
 	openPopUp(dataLocation);
 
