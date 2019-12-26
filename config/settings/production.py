@@ -15,9 +15,9 @@ SECRET_KEY = get_env_variable('GALLARY_SECRET_KEY')
 
 DEBUG = False
 
-INSTALLED_APPS += ['gallary.callforward', 'gallary.home.apps.HomeConfig']
+INSTALLED_APPS += ['callforward', 'home.apps.HomeConfig']
 
-DATABASES {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'gallary',
@@ -29,7 +29,7 @@ DATABASES {
 }
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'gallary/', 'static/')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'gallary/', 'media/')
