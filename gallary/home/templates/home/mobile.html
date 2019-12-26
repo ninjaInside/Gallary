@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <script src="{% static 'home/js/mobile/librailes.min.js' %}" async></script>
+    <script src="{% static 'home/js/mobile/animationUI.js' %}" defer></script>
+    <script src="{% static 'home/js/mobile/popUpManager.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'home/css/mobile/style.min.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+	<title>Places</title>
+</head>
+<body>
+    {% for place in places %}
+	<div class="pop-up">
+		<span>
+			<button class="pop-up-button" data-type="close"></button>
+            {{ place.text }}
+		</span>
+	</div>
+    {% endfor %}
+	<nav>
+		<button data-direction="up"></button>
+		<button data-direction="down"></button>
+	</nav>
+
+	<div class="show-text">
+			<button data-type="pop" id="show-text"></button>
+	</div>
+
+	<main class="main-window">
+        {% for place in places %}
+        <section data-location="{{ place.id }}">
+            <img src="{{ place.image.url }}" alt="" data-index='{{ place.id }}'>
+		</section>
+        {% endfor %}
+	</main>
+</body>
+</html>
