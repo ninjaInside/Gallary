@@ -27,7 +27,7 @@ function showPopUp() {
 		index = +index;
 
 	let currentPopUp = document.querySelectorAll('.pop-up');
-		currentPopUp = currentPopUp[index];
+		currentPopUp = currentPopUp[--index];
 
 	currentPopUp.style.display = 'flex';
 
