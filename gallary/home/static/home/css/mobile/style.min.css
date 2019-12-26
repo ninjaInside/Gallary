@@ -70,7 +70,7 @@ nav {
   right: 0;
 }
 nav button:first-child {
-  background: url(../img/up.png) no-repeat;
+  background: url(../../img/mobile/up.png) no-repeat;
   background-size: cover;
   width: 156px;
   height: 156px;
@@ -78,7 +78,7 @@ nav button:first-child {
   margin-bottom: 20px;
 }
 nav button:last-child {
-  background: url(../img/down.png) no-repeat;
+  background: url(../../img/mobile/down.png) no-repeat;
   background-size: cover;
   width: 156px;
   height: 156px;
@@ -96,7 +96,7 @@ nav button:last-child {
   right: 0;
 }
 .show-text button {
-  background: url(../img/eye.png) no-repeat;
+  background: url(../../img/mobile/eye.png) no-repeat;
   background-size: cover;
   background-position: center;
   width: 156px;
@@ -138,7 +138,7 @@ nav button:last-child {
   left: 0;
   right: 0;
   border: 0;
-  background: url(../img/close.png) center;
+  background: url(../../img/mobile/close.png) center;
   background-size: cover;
   width: 164px;
   height: 164px;

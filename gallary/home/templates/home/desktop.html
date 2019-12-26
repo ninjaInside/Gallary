@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <script src="{% static 'home/js/desktop/librailes.min.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'home/css/desktop/style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <script src="{% static 'home/js/desktop/navigationOnCart.js' %}" defer></script>
+    <script src="{% static 'home/js/desktop/animation.js' %}" defer></script>
+    <script src="{% static 'home/js/desktop/preloadAnimation.js' %}" defer></script> 
+	<title>Places</title>
+</head>
+<body>
+	<div class="preload-window">
+        <img src="{% static 'home/img/desktop/preload.svg' %}" alt="">
+	</div>
+	<div class="map">
+		<button class="show-map" data-type="pop-up"></button>
+	</div>
+	<div class="location">
+		<div class="wrap_location">
+			<div class="name">
+                {% for place in places %}
+                    {{ place.name }}
+                {% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="counter">
+		1
+	</div>
+	<div class="move-of-slider">
+			<button class="button-up" data-direction="up">
+                <img src="{% static 'home/img/desktop/up.png' %}" alt="">
+			</button>
+			<button class="button-down" data-direction="down">
+                <img src="{% static 'home/img/desktop/down.png' %}" alt="">
+			</button>
+		</div>
+	<main>
+		<div class="main-window">
+            {% for place in places %}
+            <div class="slider-element" data-location="{{ place.url }}">
+
+				<div class="image-landscape">
+                    <img src="{{ place.image.url }}" alt="">
+				</div>
+
+				<div class="description-landscape">
+                    {{ place.text }}
+				</div>
+
+			</div>
+            {% endfor %}
+		</div>
+	</main>
+</body>
+</html>

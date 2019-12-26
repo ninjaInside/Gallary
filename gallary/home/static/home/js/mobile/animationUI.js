@@ -63,7 +63,7 @@ function slideUp() {
 
 function slideDown() {
 
-	if (posYSlider >= (document.documentElement.clientHeight * 3)) {
+	if (posYSlider >= (document.documentElement.clientHeight * (document.querySelectorAll('section').length - 1))) {
 
 		return;
 
