@@ -65,7 +65,7 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
-  margin-top: 1250px;
+  margin-top: 1350px;
   left: 0;
   right: 0;
 }
@@ -143,10 +143,4 @@ nav button:last-child {
   width: 164px;
   height: 164px;
   top: -195px;
-}
-
-@media (min-height: 800px) {
-	nav {
-		margin-top: 1500px;
-	}
 }

@@ -2,6 +2,15 @@ document.addEventListener('click', checkButton);
 
 let posYSlider = 0;
 let posYLocation = 0;
+let heightForScroll;
+
+window.addEventListener('load', getH);
+
+function getH() {
+
+	heightForScroll = document.documentElement.offsetHeight;
+
+}
 
 function checkButton(event) {
 	
@@ -55,7 +64,7 @@ function slideUp() {
 
 	let slider = document.querySelector('.main-window');
 
-	posYSlider -= document.documentElement.clientHeight;
+	posYSlider -= heightForScroll;
 
 	slider.style.transform = `translateY(-${posYSlider}px)`;  
 
@@ -63,7 +72,7 @@ function slideUp() {
 
 function slideDown() {
 
-	if (posYSlider >= (document.documentElement.clientHeight * (document.querySelectorAll('section').length - 1))) {
+	if (posYSlider >= (heightForScroll * (document.querySelectorAll('section').length - 1))) {
 
 		return;
 
@@ -71,7 +80,7 @@ function slideDown() {
 
 	let slider = document.querySelector('.main-window');
 
-	posYSlider += document.documentElement.clientHeight;
+	posYSlider += heightForScroll;
 
 	slider.style.transform = `translateY(-${posYSlider}px)`;  
 
