@@ -62,8 +62,8 @@ nav {
           align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 0 auto;
   margin-top: 1350px;
   left: 0;
@@ -75,7 +75,7 @@ nav button:first-child {
   width: 156px;
   height: 156px;
   border: 0;
-  margin-bottom: 20px;
+  margin: 0 155px;
 }
 nav button:last-child {
   background: url(../img/down.png) no-repeat;
@@ -83,6 +83,7 @@ nav button:last-child {
   width: 156px;
   height: 156px;
   border: 0;
+  margin: 0 155px;
 }
 
 .show-text {
